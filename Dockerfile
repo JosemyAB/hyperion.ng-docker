@@ -42,7 +42,7 @@ RUN echo "#!/bin/bash" > /start.sh
 RUN echo "groupmod -g \$2 hyperion" >> /start.sh
 RUN echo "usermod -u \$1 hyperion" >> /start.sh
 RUN echo "chown -R hyperion:hyperion /config" >> /start.sh
-RUN echo "sudo -u hyperion /usr/bin/hyperiond -v --service -u /config" >> /start.sh
+RUN echo "sudo -u hyperion /usr/bin/hyperiond -i --service -u /config" >> /start.sh
 
 RUN chmod 777 /start.sh
 
